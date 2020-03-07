@@ -9311,3 +9311,18 @@ hostname: bogon
 2020-01-13 23:03:02,385 INFO 76918 [egg-watcher:application] watcher start success
 2020-01-13 23:03:02,391 INFO 76918 [egg-mysql] instance[0] status OK, rds currentTime: Mon Jan 13 2020 23:03:02 GMT+0800 (GMT+08:00)
 2020-01-13 23:03:02,400 INFO 76918 [egg:core] dump config after ready, 5ms
+2020-01-14 11:20:30,123 INFO 82334 [egg:logger] init all loggers with options: {"dir":"/Users/hj/Desktop/日常/前端/月月前端/my_blog/logs/test_vue","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"test_vue-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-01-14 11:20:30,153 INFO 82334 [egg-multipart] stream mode enable
+2020-01-14 11:20:30,153 INFO 82334 [egg-mysql] connecting root@127.0.0.1:3306/blog
+2020-01-14 11:20:30,624 INFO 82334 [egg-static] starting static serve /public/ -> /Users/hj/Desktop/日常/前端/月月前端/my_blog/public
+2020-01-14 11:20:30,627 INFO 82334 [egg-security] use methodnoallow middleware
+2020-01-14 11:20:30,628 INFO 82334 [egg-security] use noopen middleware
+2020-01-14 11:20:30,628 INFO 82334 [egg-security] use nosniff middleware
+2020-01-14 11:20:30,629 INFO 82334 [egg-security] use xssProtection middleware
+2020-01-14 11:20:30,630 INFO 82334 [egg-security] use xframe middleware
+2020-01-14 11:20:30,631 INFO 82334 [egg-security] use dta middleware
+2020-01-14 11:20:30,631 INFO 82334 [egg-security] compose 6 middlewares into one security middleware
+2020-01-14 11:20:30,648 INFO 82334 [egg:core] dump config after load, 6ms
+2020-01-14 11:20:30,676 INFO 82334 [egg-watcher:application] watcher start success
+2020-01-14 11:20:30,726 INFO 82334 [egg-mysql] instance[0] status OK, rds currentTime: Tue Jan 14 2020 11:20:30 GMT+0800 (GMT+08:00)
+2020-01-14 11:20:30,733 INFO 82334 [egg:core] dump config after ready, 5ms

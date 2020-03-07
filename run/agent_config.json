@@ -75,7 +75,7 @@
     "onerror": {
       "errorPageUrl": "",
       "appErrorFilter": null,
-      "templatePath": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-onerror/lib/onerror_page.mustache"
+      "templatePath": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-onerror/lib/onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
@@ -86,10 +86,10 @@
       "cookieMaxAge": "1y"
     },
     "watcher": {
-      "type": "default",
+      "type": "development",
       "eventSources": {
-        "default": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-watcher/lib/event-sources/default",
-        "development": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-watcher/lib/event-sources/development"
+        "default": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-watcher/lib/event-sources/development"
       }
     },
     "customLogger": {
@@ -117,6 +117,13 @@
         "cron": "0 30 4 * * *"
       }
     },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": false,
+      "reloadOnDebug": true,
+      "overrideDefault": false
+    },
     "logrotator": {
       "filesRotateByHour": null,
       "hourDelimiter": "-",
@@ -128,16 +135,15 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "/Users/hj/Desktop/日常/前端/月月前端/blog/public",
+      "dir": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/public",
       "dynamic": true,
       "preload": false,
-      "buffer": true,
-      "maxFiles": 1000,
-      "maxAge": 31536000
+      "buffer": false,
+      "maxFiles": 1000
     },
     "view": {
-      "root": "/Users/hj/Desktop/日常/前端/月月前端/blog/app/view",
-      "cache": true,
+      "root": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/app/view",
+      "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
       "mapping": {}
@@ -157,7 +163,7 @@
         "database": "blog"
       }
     },
-    "env": "prod",
+    "env": "local",
     "name": "test_vue",
     "keys": "<String len: 27>",
     "proxy": false,
@@ -246,9 +252,9 @@
       "author": "",
       "license": "MIT"
     },
-    "baseDir": "/Users/hj/Desktop/日常/前端/月月前端/blog",
+    "baseDir": "/Users/hj/Desktop/日常/前端/月月前端/my_blog",
     "HOME": "/Users/hj",
-    "rundir": "/Users/hj/Desktop/日常/前端/月月前端/blog/run",
+    "rundir": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -280,19 +286,21 @@
       "onerror": "<Function onerror>"
     },
     "logger": {
-      "dir": "/Users/hj/logs/test_vue",
+      "dir": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/logs/test_vue",
       "encoding": "utf8",
-      "env": "prod",
+      "env": "local",
       "level": "INFO",
       "consoleLevel": "INFO",
-      "disableConsoleAfterReady": true,
+      "disableConsoleAfterReady": false,
       "outputJSON": false,
       "buffer": true,
       "appLogName": "test_vue-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
-      "coreLogger": {},
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
       "allowDebugAtProd": false,
       "type": "agent"
     },
@@ -332,8 +340,8 @@
     "cluster": {
       "listen": {
         "path": "",
-        "port": 80,
-        "hostname": "127.0.0.1"
+        "port": 7001,
+        "hostname": ""
       }
     },
     "clusterClient": {
@@ -354,8 +362,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg/config/plugin.js",
-      "path": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-session",
+      "from": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-session",
       "version": "3.1.0"
     },
     "security": {
@@ -367,8 +375,8 @@
         "session"
       ],
       "env": [],
-      "from": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg/config/plugin.js",
-      "path": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-security",
+      "from": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-security",
       "version": "2.7.1"
     },
     "jsonp": {
@@ -380,8 +388,8 @@
         "security"
       ],
       "env": [],
-      "from": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg/config/plugin.js",
-      "path": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-jsonp",
+      "from": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -393,8 +401,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg/config/plugin.js",
-      "path": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-onerror",
+      "from": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-onerror",
       "version": "2.1.0"
     },
     "i18n": {
@@ -404,8 +412,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg/config/plugin.js",
-      "path": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-i18n",
+      "from": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-i18n",
       "version": "2.1.1"
     },
     "watcher": {
@@ -415,8 +423,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg/config/plugin.js",
-      "path": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-watcher",
+      "from": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-watcher",
       "version": "3.1.0"
     },
     "schedule": {
@@ -426,8 +434,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg/config/plugin.js",
-      "path": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-schedule",
+      "from": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-schedule",
       "version": "3.6.4"
     },
     "multipart": {
@@ -439,9 +447,24 @@
         "schedule"
       ],
       "env": [],
-      "from": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg/config/plugin.js",
-      "path": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-multipart",
+      "from": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-multipart",
       "version": "2.9.1"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-development",
+      "version": "2.4.3"
     },
     "logrotator": {
       "enable": true,
@@ -452,8 +475,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg/config/plugin.js",
-      "path": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-logrotator",
+      "from": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-logrotator",
       "version": "3.1.0"
     },
     "static": {
@@ -463,8 +486,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg/config/plugin.js",
-      "path": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-static",
+      "from": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-static",
       "version": "2.2.0"
     },
     "view": {
@@ -474,8 +497,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg/config/plugin.js",
-      "path": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-view",
+      "from": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-view",
       "version": "2.1.2"
     },
     "mysql": {
@@ -485,8 +508,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/hj/Desktop/日常/前端/月月前端/blog/config/plugin.js",
-      "path": "/Users/hj/Desktop/日常/前端/月月前端/blog/node_modules/egg-mysql",
+      "from": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/config/plugin.js",
+      "path": "/Users/hj/Desktop/日常/前端/月月前端/my_blog/node_modules/egg-mysql",
       "version": "3.0.0"
     }
   }
